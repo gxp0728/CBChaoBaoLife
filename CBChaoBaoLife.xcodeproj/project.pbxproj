@@ -14,6 +14,7 @@
 		C7513BE31BA9448500A1B330 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7513BE21BA9448500A1B330 /* Images.xcassets */; };
 		C7513BE61BA9448500A1B330 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7513BE41BA9448500A1B330 /* LaunchScreen.xib */; };
 		C7513BF21BA9448500A1B330 /* CBChaoBaoLifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513BF11BA9448500A1B330 /* CBChaoBaoLifeTests.m */; };
+		C7E29E731BA9498F00E75577 /* CBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E29E721BA9498F00E75577 /* CBHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,8 @@
 		C7513BEB1BA9448500A1B330 /* CBChaoBaoLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBChaoBaoLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7513BF01BA9448500A1B330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7513BF11BA9448500A1B330 /* CBChaoBaoLifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBChaoBaoLifeTests.m; sourceTree = "<group>"; };
+		C7E29E711BA9498F00E75577 /* CBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHomeViewController.h; sourceTree = "<group>"; };
+		C7E29E721BA9498F00E75577 /* CBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +83,10 @@
 		C7513BD11BA9448500A1B330 /* CBChaoBaoLife */ = {
 			isa = PBXGroup;
 			children = (
-				C7513BD61BA9448500A1B330 /* AppDelegate.h */,
-				C7513BD71BA9448500A1B330 /* AppDelegate.m */,
+				C7E29E701BA948C000E75577 /* Others */,
+				C7E29E6E1BA948AF00E75577 /* Models */,
+				C7E29E6D1BA948A600E75577 /* Views */,
+				C7E29E6C1BA9489900E75577 /* Controllers */,
 				C7513BDF1BA9448500A1B330 /* Main.storyboard */,
 				C7513BE21BA9448500A1B330 /* Images.xcassets */,
 				C7513BE41BA9448500A1B330 /* LaunchScreen.xib */,
@@ -115,6 +120,38 @@
 				C7513BF01BA9448500A1B330 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7E29E6C1BA9489900E75577 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C7E29E711BA9498F00E75577 /* CBHomeViewController.h */,
+				C7E29E721BA9498F00E75577 /* CBHomeViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C7E29E6D1BA948A600E75577 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C7E29E6E1BA948AF00E75577 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C7E29E701BA948C000E75577 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				C7513BD61BA9448500A1B330 /* AppDelegate.h */,
+				C7513BD71BA9448500A1B330 /* AppDelegate.m */,
+			);
+			name = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +256,7 @@
 			files = (
 				C7513BD81BA9448500A1B330 /* AppDelegate.m in Sources */,
 				C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */,
+				C7E29E731BA9498F00E75577 /* CBHomeViewController.m in Sources */,
 				C7513BD51BA9448500A1B330 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +452,7 @@
 				C7513BF71BA9448500A1B330 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7513BF81BA9448500A1B330 /* Build configuration list for PBXNativeTarget "CBChaoBaoLifeTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +461,7 @@
 				C7513BFA1BA9448500A1B330 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
