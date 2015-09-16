@@ -10,7 +10,8 @@
 #import <RDVTabBarController.h>
 //#import <RDVTabBar.h>
 #import <RDVTabBarItem.h>
-
+#import "CBHmePageViewController.h"
+#import "CBWelcomePageViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -80,6 +81,32 @@
     }
     
     [window makeKeyAndVisible];
+    NSDictionary*infoDict=[NSBundle mainBundle].infoDictionary;
+    //从info中取到版本号
+    NSString*newVersion=infoDict[@"CFBundleVersion"];
+    
+    
+    //2。和之前保存的app版本号进行对比  如果相同则从主页启动  如果不同则从欢迎页面启动
+    NSString*oldVersion=[[NSUserDefaults standardUserDefaults]objectForKey:@"CFBundleVersion"];
+    if (oldVersion==nil) {
+        //从欢迎页启动
+        UIStoryboard*storyBoard=[UIStoryboard storyboardWithName:@"CBWelcomwePage" bundle:nil];
+        CBWelcomePageViewController*welVc=   [storyBoard instantiateViewControllerWithIdentifier:@"welPage"];
+        self.window.rootViewController=welVc;
+    }else {
+        if ([oldVersion isEqualToString:newVersion]) {
+ 
+            self.window.rootViewController=tabBarController;
+        }else{
+            //从欢迎页启动
+            UIStoryboard*storyBoard=[UIStoryboard storyboardWithName:@"CBWelcomwePage" bundle:nil];
+            CBWelcomePageViewController*welVc=   [storyBoard instantiateViewControllerWithIdentifier:@"welPage"];
+            self.window.rootViewController=welVc;
+        }
+    }
+    
+    //3。如果不同 把新版本app的版本号保存起来 利用偏好的方法 并且自己起一个名字
+    [[NSUserDefaults standardUserDefaults]setObject:newVersion forKey:@"CFBundleVersion"];
     
     return YES;
 

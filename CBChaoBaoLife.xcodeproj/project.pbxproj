@@ -18,6 +18,8 @@
 		C7513C081BA95D3800A1B330 /* CBHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7513C071BA95D3800A1B330 /* CBHomePage.storyboard */; };
 		C7513C0C1BA964EC00A1B330 /* CBShowBabyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C0B1BA964EC00A1B330 /* CBShowBabyTableViewController.m */; };
 		C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */; };
+		C7E29E911BA96B0A00E75577 /* CBWelcomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E29E8F1BA96B0A00E75577 /* CBWelcomePageViewController.m */; };
+		C7E29E921BA96B0A00E75577 /* CBWelcomwePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E29E901BA96B0A00E75577 /* CBWelcomwePage.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,9 @@
 		C7513C0B1BA964EC00A1B330 /* CBShowBabyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBShowBabyTableViewController.m; sourceTree = "<group>"; };
 		C7513C111BA9655600A1B330 /* CBMyBabyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMyBabyTableViewController.h; sourceTree = "<group>"; };
 		C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMyBabyTableViewController.m; sourceTree = "<group>"; };
+		C7E29E8E1BA96B0A00E75577 /* CBWelcomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBWelcomePageViewController.h; sourceTree = "<group>"; };
+		C7E29E8F1BA96B0A00E75577 /* CBWelcomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBWelcomePageViewController.m; sourceTree = "<group>"; };
+		C7E29E901BA96B0A00E75577 /* CBWelcomwePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBWelcomwePage.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +185,7 @@
 		C7E29E6C1BA9489900E75577 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C7E29E931BA96B0E00E75577 /* 欢迎页面 */,
 				C7513C0D1BA964EF00A1B330 /* 我的页面 */,
 				C7513C091BA964C200A1B330 /* 晒宝页面 */,
 				C7513BFC1BA9525800A1B330 /* 潮宝主页 */,
@@ -209,6 +215,16 @@
 				C7513BD71BA9448500A1B330 /* AppDelegate.m */,
 			);
 			name = Others;
+			sourceTree = "<group>";
+		};
+		C7E29E931BA96B0E00E75577 /* 欢迎页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C7E29E8E1BA96B0A00E75577 /* CBWelcomePageViewController.h */,
+				C7E29E8F1BA96B0A00E75577 /* CBWelcomePageViewController.m */,
+				C7E29E901BA96B0A00E75577 /* CBWelcomwePage.storyboard */,
+			);
+			name = "欢迎页面";
 			sourceTree = "<group>";
 		};
 		E71AD93BACB4F5A3E96178AE /* Pods */ = {
@@ -303,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7513BE61BA9448500A1B330 /* LaunchScreen.xib in Resources */,
+				C7E29E921BA96B0A00E75577 /* CBWelcomwePage.storyboard in Resources */,
 				C7513C081BA95D3800A1B330 /* CBHomePage.storyboard in Resources */,
 				C7513BE31BA9448500A1B330 /* Images.xcassets in Resources */,
 			);
@@ -358,6 +375,7 @@
 				C7513C0C1BA964EC00A1B330 /* CBShowBabyTableViewController.m in Sources */,
 				C7513C061BA95BF900A1B330 /* CBHmePageViewController.m in Sources */,
 				C7513BD81BA9448500A1B330 /* AppDelegate.m in Sources */,
+				C7E29E911BA96B0A00E75577 /* CBWelcomePageViewController.m in Sources */,
 				C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */,
 				C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */,
 				C7513BD51BA9448500A1B330 /* main.m in Sources */,
