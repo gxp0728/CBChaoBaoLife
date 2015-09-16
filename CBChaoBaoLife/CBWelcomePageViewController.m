@@ -68,7 +68,7 @@ _PageControl.numberOfPages=5;
     [startButton setBackgroundImage:[UIImage imageNamed:@"introduction_enter_nomal"] forState:UIControlStateNormal];
     [startButton setBackgroundImage:[UIImage imageNamed:@"introduction_enter_press"] forState:UIControlStateHighlighted];
     [startButton addTarget:self action:@selector(logon:) forControlEvents:UIControlEventTouchUpInside];
-    
+    startButton.backgroundColor=[UIColor redColor];
 }
 
 
@@ -77,10 +77,14 @@ _PageControl.numberOfPages=5;
     
     //直接将主页设置为window的rootViewVCcontoller这样就不会再回到欢迎页了
     //从storeyboard加载控制器过来 首先找到id
-    UIStoryboard*storyBoard=[UIStoryboard storyboardWithName:@"CBHomePage" bundle:nil];
+    //UIStoryboard*storyBoard=[UIStoryboard storyboardWithName:@"CBHomePage" bundle:nil];
+    CBHmePageViewController*firstViewController=[[CBHmePageViewController alloc]init];
     
-    CBHmePageViewController*homeVc=   [storyBoard instantiateViewControllerWithIdentifier:@"HomePage"];
-    [UIApplication sharedApplication].keyWindow.rootViewController=homeVc;
+    
+    
+    
+    //CBHmePageViewController*homeVc=   [storyBoard instantiateViewControllerWithIdentifier:@"homepage"];
+    [UIApplication sharedApplication].keyWindow.rootViewController=firstViewController;
     
     
 }

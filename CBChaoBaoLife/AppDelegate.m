@@ -12,6 +12,7 @@
 #import <RDVTabBarItem.h>
 #import "CBHmePageViewController.h"
 #import "CBWelcomePageViewController.h"
+#import <RDVTabBarController.h>
 @interface AppDelegate ()
 
 @end
@@ -21,66 +22,66 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UIWindow* window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window = window;
+//    UIWindow* window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window = window;
+//
+//    
+//    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"CBHomePage" bundle:nil];
+//    
+//    //UIViewController *firstViewController = [[RDVFirstViewController alloc] init];
+//    UIViewController *firstViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomePage"];
+//    
+//    UIViewController *firstNavigationController = [[UINavigationController alloc]
+//                                                   initWithRootViewController:firstViewController];
+//    
+//    UIViewController *secondViewController = [storyboard instantiateViewControllerWithIdentifier:@"showBaby"];
+//    
+//    //[[RDVSecondViewController alloc] init];
+//    UIViewController *secondNavigationController = [[UINavigationController alloc]
+//                                                    initWithRootViewController:secondViewController];
+//    
+//    UIViewController *thirdViewController = [storyboard instantiateViewControllerWithIdentifier:@"myBaby"];
+//    //[[RDVThirdViewController alloc] init];
+//    UIViewController *thirdNavigationController = [[UINavigationController alloc]
+//                                                   initWithRootViewController:thirdViewController];
+//    
+//    RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
+//    [tabBarController setViewControllers:@[firstNavigationController, secondNavigationController,thirdNavigationController]];
+//    ;
+//    
+//    window.rootViewController = tabBarController;
+//    
+//    
+//    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
+//    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
+//    NSArray *tabBarItemImages = @[@"bottom_btn1", @"bottom_btn2", @"bottom_btn3"];
+//    NSArray *tabBarItemTitles = @[@"首页",@"晒宝", @"我的",@"发现" ];
+//    
+//    RDVTabBar *tabBar = [tabBarController tabBar];
+//    
+//    [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 44)];
+//    
+//    NSInteger index = 0;
+//    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
+//        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
+//        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_checked",
+//                                                      [tabBarItemImages objectAtIndex:index]]];
+//        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_unchecked",
+//                                                        [tabBarItemImages objectAtIndex:index]]];
+//        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+//        
+//        item.title = tabBarItemTitles[index];
+//        
+//        item.selectedTitleAttributes = @{NSForegroundColorAttributeName: [UIColor purpleColor],
+//                                         NSFontAttributeName: [UIFont systemFontOfSize:18.f]};
+//        
+//        item.unselectedTitleAttributes = @{NSForegroundColorAttributeName: [UIColor grayColor],
+//                                           NSFontAttributeName: [UIFont systemFontOfSize:16.f]};
+//        
+//        index++;
+//    }
+//    
     
-    
-    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"CBHomePage" bundle:nil];
-    
-    //UIViewController *firstViewController = [[RDVFirstViewController alloc] init];
-    UIViewController *firstViewController = [storyboard instantiateViewControllerWithIdentifier:@"HomePage"];
-    
-    UIViewController *firstNavigationController = [[UINavigationController alloc]
-                                                   initWithRootViewController:firstViewController];
-    
-    UIViewController *secondViewController = [storyboard instantiateViewControllerWithIdentifier:@"showBaby"];
-    
-    //[[RDVSecondViewController alloc] init];
-    UIViewController *secondNavigationController = [[UINavigationController alloc]
-                                                    initWithRootViewController:secondViewController];
-    
-    UIViewController *thirdViewController = [storyboard instantiateViewControllerWithIdentifier:@"myBaby"];
-    //[[RDVThirdViewController alloc] init];
-    UIViewController *thirdNavigationController = [[UINavigationController alloc]
-                                                   initWithRootViewController:thirdViewController];
-    
-    RDVTabBarController *tabBarController = [[RDVTabBarController alloc] init];
-    [tabBarController setViewControllers:@[firstNavigationController, secondNavigationController,thirdNavigationController]];
-    ;
-    
-    window.rootViewController = tabBarController;
-    
-    
-    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
-    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
-    NSArray *tabBarItemImages = @[@"bottom_btn1", @"bottom_btn2", @"bottom_btn3"];
-    NSArray *tabBarItemTitles = @[@"首页",@"晒宝", @"我的",@"发现" ];
-    
-    RDVTabBar *tabBar = [tabBarController tabBar];
-    
-    [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 44)];
-    
-    NSInteger index = 0;
-    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
-        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
-        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_checked",
-                                                      [tabBarItemImages objectAtIndex:index]]];
-        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_unchecked",
-                                                        [tabBarItemImages objectAtIndex:index]]];
-        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
-        
-        item.title = tabBarItemTitles[index];
-        
-        item.selectedTitleAttributes = @{NSForegroundColorAttributeName: [UIColor purpleColor],
-                                         NSFontAttributeName: [UIFont systemFontOfSize:18.f]};
-        
-        item.unselectedTitleAttributes = @{NSForegroundColorAttributeName: [UIColor grayColor],
-                                           NSFontAttributeName: [UIFont systemFontOfSize:16.f]};
-        
-        index++;
-    }
-    
-    [window makeKeyAndVisible];
     NSDictionary*infoDict=[NSBundle mainBundle].infoDictionary;
     //从info中取到版本号
     NSString*newVersion=infoDict[@"CFBundleVersion"];
@@ -95,8 +96,14 @@
         self.window.rootViewController=welVc;
     }else {
         if ([oldVersion isEqualToString:newVersion]) {
- 
-            self.window.rootViewController=tabBarController;
+           
+            
+            CBHmePageViewController*firstViewController=[[CBHmePageViewController alloc]init];
+            
+            
+            
+            self.window.rootViewController=firstViewController;
+            
         }else{
             //从欢迎页启动
             UIStoryboard*storyBoard=[UIStoryboard storyboardWithName:@"CBWelcomwePage" bundle:nil];
@@ -108,6 +115,7 @@
     //3。如果不同 把新版本app的版本号保存起来 利用偏好的方法 并且自己起一个名字
     [[NSUserDefaults standardUserDefaults]setObject:newVersion forKey:@"CFBundleVersion"];
     
+//    [window makeKeyAndVisible];
     return YES;
 
     
