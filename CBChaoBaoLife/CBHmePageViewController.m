@@ -8,7 +8,6 @@
 
 #import "CBHmePageViewController.h"
 #import <RDVTabBarController.h>
-//#import <RDVTabBar.h>
 #import <RDVTabBarItem.h>
 #import "CBWelcomePageViewController.h"
 #import "CBShowBabyTableViewController.h"

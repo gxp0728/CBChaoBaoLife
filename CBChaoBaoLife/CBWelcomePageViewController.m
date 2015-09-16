@@ -8,6 +8,7 @@
 
 #import "CBWelcomePageViewController.h"
 #import "CBHmePageViewController.h"
+#import "CBSignInandLogInViewController.h"
 
 #define kStartButtonCenterYRatio 470.f/667.f
 #define KpageControlCenterRatio 617.f/667.f
@@ -77,15 +78,15 @@ _PageControl.numberOfPages=5;
     
     //直接将主页设置为window的rootViewVCcontoller这样就不会再回到欢迎页了
     //从storeyboard加载控制器过来 首先找到id
-    //UIStoryboard*storyBoard=[UIStoryboard storyboardWithName:@"CBHomePage" bundle:nil];
-    CBHmePageViewController*firstViewController=[[CBHmePageViewController alloc]init];
+    UIStoryboard*storyBoard=[UIStoryboard storyboardWithName:@"CBSignInandLogIn" bundle:nil];
+//    CBSignInandLogInViewController*firstViewController=[[CBSignInandLogInViewController alloc]init];
     
+    UINavigationController*Signin=[storyBoard instantiateViewControllerWithIdentifier:@"CBSignin"];
     
     
     
     //CBHmePageViewController*homeVc=   [storyBoard instantiateViewControllerWithIdentifier:@"homepage"];
-    [UIApplication sharedApplication].keyWindow.rootViewController=firstViewController;
-    
+    [UIApplication sharedApplication].keyWindow.rootViewController=Signin;
     
 }
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{

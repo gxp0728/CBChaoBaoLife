@@ -18,6 +18,8 @@
 		C7513C081BA95D3800A1B330 /* CBHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7513C071BA95D3800A1B330 /* CBHomePage.storyboard */; };
 		C7513C0C1BA964EC00A1B330 /* CBShowBabyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C0B1BA964EC00A1B330 /* CBShowBabyTableViewController.m */; };
 		C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */; };
+		C7513C1E1BA9987200A1B330 /* CBSignInandLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C1D1BA9987200A1B330 /* CBSignInandLogInViewController.m */; };
+		C7513C201BA9989100A1B330 /* CBSignInandLogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7513C1F1BA9989100A1B330 /* CBSignInandLogIn.storyboard */; };
 		C7DF8BF81BA97F9D00845A30 /* CBMyBaby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DF8BF71BA97F9D00845A30 /* CBMyBaby.storyboard */; };
 		C7DF8BFA1BA9800500845A30 /* CBShowBaby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DF8BF91BA9800500845A30 /* CBShowBaby.storyboard */; };
 		C7DF8BFE1BA9882C00845A30 /* CBHomePageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DF8BFD1BA9882C00845A30 /* CBHomePageTableViewController.m */; };
@@ -57,6 +59,9 @@
 		C7513C0B1BA964EC00A1B330 /* CBShowBabyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBShowBabyTableViewController.m; sourceTree = "<group>"; };
 		C7513C111BA9655600A1B330 /* CBMyBabyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMyBabyTableViewController.h; sourceTree = "<group>"; };
 		C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMyBabyTableViewController.m; sourceTree = "<group>"; };
+		C7513C1C1BA9987200A1B330 /* CBSignInandLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSignInandLogInViewController.h; sourceTree = "<group>"; };
+		C7513C1D1BA9987200A1B330 /* CBSignInandLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSignInandLogInViewController.m; sourceTree = "<group>"; };
+		C7513C1F1BA9989100A1B330 /* CBSignInandLogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBSignInandLogIn.storyboard; sourceTree = "<group>"; };
 		C7DF8BF71BA97F9D00845A30 /* CBMyBaby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBMyBaby.storyboard; sourceTree = "<group>"; };
 		C7DF8BF91BA9800500845A30 /* CBShowBaby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBShowBaby.storyboard; sourceTree = "<group>"; };
 		C7DF8BFC1BA9882C00845A30 /* CBHomePageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHomePageTableViewController.h; sourceTree = "<group>"; };
@@ -191,6 +196,16 @@
 			name = "我的页面";
 			sourceTree = "<group>";
 		};
+		C7513C1B1BA997B200A1B330 /* 登录/注册界面 */ = {
+			isa = PBXGroup;
+			children = (
+				C7513C1F1BA9989100A1B330 /* CBSignInandLogIn.storyboard */,
+				C7513C1C1BA9987200A1B330 /* CBSignInandLogInViewController.h */,
+				C7513C1D1BA9987200A1B330 /* CBSignInandLogInViewController.m */,
+			);
+			name = "登录/注册界面";
+			sourceTree = "<group>";
+		};
 		C7DF8BFB1BA9875100845A30 /* 主界面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +218,7 @@
 		C7E29E6C1BA9489900E75577 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C7513C1B1BA997B200A1B330 /* 登录/注册界面 */,
 				C7DF8BFB1BA9875100845A30 /* 主界面 */,
 				C7E29E931BA96B0E00E75577 /* 欢迎页面 */,
 				C7513C0D1BA964EF00A1B330 /* 我的页面 */,
@@ -341,6 +357,7 @@
 				C7513BE61BA9448500A1B330 /* LaunchScreen.xib in Resources */,
 				C7DF8BF81BA97F9D00845A30 /* CBMyBaby.storyboard in Resources */,
 				C7E29E921BA96B0A00E75577 /* CBWelcomwePage.storyboard in Resources */,
+				C7513C201BA9989100A1B330 /* CBSignInandLogIn.storyboard in Resources */,
 				C7513C081BA95D3800A1B330 /* CBHomePage.storyboard in Resources */,
 				C7513BE31BA9448500A1B330 /* Images.xcassets in Resources */,
 			);
@@ -400,6 +417,7 @@
 				C7DF8BFE1BA9882C00845A30 /* CBHomePageTableViewController.m in Sources */,
 				C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */,
 				C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */,
+				C7513C1E1BA9987200A1B330 /* CBSignInandLogInViewController.m in Sources */,
 				C7513BD51BA9448500A1B330 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
