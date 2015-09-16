@@ -1,5 +1,5 @@
 //
-//  CBHomeViewController.h
+//  CBMyBabyTableViewController.h
 //  CBChaoBaoLife
 //
 //  Created by neuedu on 15/9/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CBHomeViewController : UIViewController
+@interface CBMyBabyTableViewController : UITableViewController
 
 @end

@@ -11,11 +11,13 @@
 		C7513BD51BA9448500A1B330 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513BD41BA9448500A1B330 /* main.m */; };
 		C7513BD81BA9448500A1B330 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513BD71BA9448500A1B330 /* AppDelegate.m */; };
 		C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7513BD91BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld */; };
-		C7513BE11BA9448500A1B330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7513BDF1BA9448500A1B330 /* Main.storyboard */; };
 		C7513BE31BA9448500A1B330 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7513BE21BA9448500A1B330 /* Images.xcassets */; };
 		C7513BE61BA9448500A1B330 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7513BE41BA9448500A1B330 /* LaunchScreen.xib */; };
 		C7513BF21BA9448500A1B330 /* CBChaoBaoLifeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513BF11BA9448500A1B330 /* CBChaoBaoLifeTests.m */; };
-		C7E29E731BA9498F00E75577 /* CBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E29E721BA9498F00E75577 /* CBHomeViewController.m */; };
+		C7513C061BA95BF900A1B330 /* CBHmePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C051BA95BF900A1B330 /* CBHmePageViewController.m */; };
+		C7513C081BA95D3800A1B330 /* CBHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7513C071BA95D3800A1B330 /* CBHomePage.storyboard */; };
+		C7513C0C1BA964EC00A1B330 /* CBShowBabyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C0B1BA964EC00A1B330 /* CBShowBabyTableViewController.m */; };
+		C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +40,18 @@
 		C7513BD61BA9448500A1B330 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C7513BD71BA9448500A1B330 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C7513BDA1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CBChaoBaoLife.xcdatamodel; sourceTree = "<group>"; };
-		C7513BE01BA9448500A1B330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7513BE21BA9448500A1B330 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C7513BE51BA9448500A1B330 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C7513BEB1BA9448500A1B330 /* CBChaoBaoLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBChaoBaoLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7513BF01BA9448500A1B330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7513BF11BA9448500A1B330 /* CBChaoBaoLifeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBChaoBaoLifeTests.m; sourceTree = "<group>"; };
-		C7E29E711BA9498F00E75577 /* CBHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHomeViewController.h; sourceTree = "<group>"; };
-		C7E29E721BA9498F00E75577 /* CBHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHomeViewController.m; sourceTree = "<group>"; };
+		C7513C041BA95BF900A1B330 /* CBHmePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHmePageViewController.h; sourceTree = "<group>"; };
+		C7513C051BA95BF900A1B330 /* CBHmePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHmePageViewController.m; sourceTree = "<group>"; };
+		C7513C071BA95D3800A1B330 /* CBHomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBHomePage.storyboard; sourceTree = "<group>"; };
+		C7513C0A1BA964EC00A1B330 /* CBShowBabyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBShowBabyTableViewController.h; sourceTree = "<group>"; };
+		C7513C0B1BA964EC00A1B330 /* CBShowBabyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBShowBabyTableViewController.m; sourceTree = "<group>"; };
+		C7513C111BA9655600A1B330 /* CBMyBabyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMyBabyTableViewController.h; sourceTree = "<group>"; };
+		C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMyBabyTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +108,6 @@
 				C7E29E6E1BA948AF00E75577 /* Models */,
 				C7E29E6D1BA948A600E75577 /* Views */,
 				C7E29E6C1BA9489900E75577 /* Controllers */,
-				C7513BDF1BA9448500A1B330 /* Main.storyboard */,
 				C7513BE21BA9448500A1B330 /* Images.xcassets */,
 				C7513BE41BA9448500A1B330 /* LaunchScreen.xib */,
 				C7513BD91BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld */,
@@ -137,11 +142,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C7513BFB1BA9524A00A1B330 /* 晒宝 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "晒宝";
+			sourceTree = "<group>";
+		};
+		C7513BFC1BA9525800A1B330 /* 潮宝主页 */ = {
+			isa = PBXGroup;
+			children = (
+				C7513C041BA95BF900A1B330 /* CBHmePageViewController.h */,
+				C7513C051BA95BF900A1B330 /* CBHmePageViewController.m */,
+				C7513C071BA95D3800A1B330 /* CBHomePage.storyboard */,
+			);
+			name = "潮宝主页";
+			sourceTree = "<group>";
+		};
+		C7513C091BA964C200A1B330 /* 晒宝页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C7513C0A1BA964EC00A1B330 /* CBShowBabyTableViewController.h */,
+				C7513C0B1BA964EC00A1B330 /* CBShowBabyTableViewController.m */,
+			);
+			name = "晒宝页面";
+			sourceTree = "<group>";
+		};
+		C7513C0D1BA964EF00A1B330 /* 我的页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C7513C111BA9655600A1B330 /* CBMyBabyTableViewController.h */,
+				C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */,
+			);
+			name = "我的页面";
+			sourceTree = "<group>";
+		};
 		C7E29E6C1BA9489900E75577 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C7E29E711BA9498F00E75577 /* CBHomeViewController.h */,
-				C7E29E721BA9498F00E75577 /* CBHomeViewController.m */,
+				C7513C0D1BA964EF00A1B330 /* 我的页面 */,
+				C7513C091BA964C200A1B330 /* 晒宝页面 */,
+				C7513BFC1BA9525800A1B330 /* 潮宝主页 */,
+				C7513BFB1BA9524A00A1B330 /* 晒宝 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -260,8 +302,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7513BE11BA9448500A1B330 /* Main.storyboard in Resources */,
 				C7513BE61BA9448500A1B330 /* LaunchScreen.xib in Resources */,
+				C7513C081BA95D3800A1B330 /* CBHomePage.storyboard in Resources */,
 				C7513BE31BA9448500A1B330 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,9 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7513C0C1BA964EC00A1B330 /* CBShowBabyTableViewController.m in Sources */,
+				C7513C061BA95BF900A1B330 /* CBHmePageViewController.m in Sources */,
 				C7513BD81BA9448500A1B330 /* AppDelegate.m in Sources */,
 				C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */,
-				C7E29E731BA9498F00E75577 /* CBHomeViewController.m in Sources */,
+				C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */,
 				C7513BD51BA9448500A1B330 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,14 +383,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C7513BDF1BA9448500A1B330 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7513BE01BA9448500A1B330 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C7513BE41BA9448500A1B330 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
