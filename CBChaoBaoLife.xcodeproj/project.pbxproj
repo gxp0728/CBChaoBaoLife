@@ -20,6 +20,9 @@
 		C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */; };
 		C7513C1E1BA9987200A1B330 /* CBSignInandLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C1D1BA9987200A1B330 /* CBSignInandLogInViewController.m */; };
 		C7513C201BA9989100A1B330 /* CBSignInandLogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7513C1F1BA9989100A1B330 /* CBSignInandLogIn.storyboard */; };
+		C7DE7F751BAAC17D000ECBA0 /* CBHomePageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE7F741BAAC17D000ECBA0 /* CBHomePageHeader.m */; };
+		C7DE7F771BAAC18A000ECBA0 /* CBHomePageHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */; };
+		C7DE7F7B1BAAC344000ECBA0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE7F7A1BAAC344000ECBA0 /* UIView+Extension.m */; };
 		C7DF8BF81BA97F9D00845A30 /* CBMyBaby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DF8BF71BA97F9D00845A30 /* CBMyBaby.storyboard */; };
 		C7DF8BFA1BA9800500845A30 /* CBShowBaby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DF8BF91BA9800500845A30 /* CBShowBaby.storyboard */; };
 		C7DF8BFE1BA9882C00845A30 /* CBHomePageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DF8BFD1BA9882C00845A30 /* CBHomePageTableViewController.m */; };
@@ -62,6 +65,11 @@
 		C7513C1C1BA9987200A1B330 /* CBSignInandLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSignInandLogInViewController.h; sourceTree = "<group>"; };
 		C7513C1D1BA9987200A1B330 /* CBSignInandLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSignInandLogInViewController.m; sourceTree = "<group>"; };
 		C7513C1F1BA9989100A1B330 /* CBSignInandLogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBSignInandLogIn.storyboard; sourceTree = "<group>"; };
+		C7DE7F731BAAC17D000ECBA0 /* CBHomePageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHomePageHeader.h; sourceTree = "<group>"; };
+		C7DE7F741BAAC17D000ECBA0 /* CBHomePageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHomePageHeader.m; sourceTree = "<group>"; };
+		C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBHomePageHeader.xib; sourceTree = "<group>"; };
+		C7DE7F791BAAC344000ECBA0 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		C7DE7F7A1BAAC344000ECBA0 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		C7DF8BF71BA97F9D00845A30 /* CBMyBaby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBMyBaby.storyboard; sourceTree = "<group>"; };
 		C7DF8BF91BA9800500845A30 /* CBShowBaby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBShowBaby.storyboard; sourceTree = "<group>"; };
 		C7DF8BFC1BA9882C00845A30 /* CBHomePageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHomePageTableViewController.h; sourceTree = "<group>"; };
@@ -206,6 +214,15 @@
 			name = "登录/注册界面";
 			sourceTree = "<group>";
 		};
+		C7DE7F781BAAC334000ECBA0 /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE7F791BAAC344000ECBA0 /* UIView+Extension.h */,
+				C7DE7F7A1BAAC344000ECBA0 /* UIView+Extension.m */,
+			);
+			name = "分类";
+			sourceTree = "<group>";
+		};
 		C7DF8BFB1BA9875100845A30 /* 主界面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +249,9 @@
 		C7E29E6D1BA948A600E75577 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C7DE7F731BAAC17D000ECBA0 /* CBHomePageHeader.h */,
+				C7DE7F741BAAC17D000ECBA0 /* CBHomePageHeader.m */,
+				C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -246,6 +266,7 @@
 		C7E29E701BA948C000E75577 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				C7DE7F781BAAC334000ECBA0 /* 分类 */,
 				C7513BD61BA9448500A1B330 /* AppDelegate.h */,
 				C7513BD71BA9448500A1B330 /* AppDelegate.m */,
 			);
@@ -354,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7DF8BFA1BA9800500845A30 /* CBShowBaby.storyboard in Resources */,
+				C7DE7F771BAAC18A000ECBA0 /* CBHomePageHeader.xib in Resources */,
 				C7513BE61BA9448500A1B330 /* LaunchScreen.xib in Resources */,
 				C7DF8BF81BA97F9D00845A30 /* CBMyBaby.storyboard in Resources */,
 				C7E29E921BA96B0A00E75577 /* CBWelcomwePage.storyboard in Resources */,
@@ -412,9 +434,11 @@
 			files = (
 				C7513C0C1BA964EC00A1B330 /* CBShowBabyTableViewController.m in Sources */,
 				C7513C061BA95BF900A1B330 /* CBHmePageViewController.m in Sources */,
+				C7DE7F7B1BAAC344000ECBA0 /* UIView+Extension.m in Sources */,
 				C7513BD81BA9448500A1B330 /* AppDelegate.m in Sources */,
 				C7E29E911BA96B0A00E75577 /* CBWelcomePageViewController.m in Sources */,
 				C7DF8BFE1BA9882C00845A30 /* CBHomePageTableViewController.m in Sources */,
+				C7DE7F751BAAC17D000ECBA0 /* CBHomePageHeader.m in Sources */,
 				C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */,
 				C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */,
 				C7513C1E1BA9987200A1B330 /* CBSignInandLogInViewController.m in Sources */,
