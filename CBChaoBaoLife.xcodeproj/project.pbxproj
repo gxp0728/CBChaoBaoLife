@@ -23,6 +23,8 @@
 		C7DE7F751BAAC17D000ECBA0 /* CBHomePageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE7F741BAAC17D000ECBA0 /* CBHomePageHeader.m */; };
 		C7DE7F771BAAC18A000ECBA0 /* CBHomePageHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */; };
 		C7DE7F7B1BAAC344000ECBA0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE7F7A1BAAC344000ECBA0 /* UIView+Extension.m */; };
+		C7DE7F811BAAC659000ECBA0 /* CBFunctionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE7F801BAAC659000ECBA0 /* CBFunctionTableViewController.m */; };
+		C7DE7F851BAAE29F000ECBA0 /* CBMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE7F841BAAE29F000ECBA0 /* CBMineHeaderView.m */; };
 		C7DF8BF81BA97F9D00845A30 /* CBMyBaby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DF8BF71BA97F9D00845A30 /* CBMyBaby.storyboard */; };
 		C7DF8BFA1BA9800500845A30 /* CBShowBaby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DF8BF91BA9800500845A30 /* CBShowBaby.storyboard */; };
 		C7DF8BFE1BA9882C00845A30 /* CBHomePageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DF8BFD1BA9882C00845A30 /* CBHomePageTableViewController.m */; };
@@ -70,6 +72,10 @@
 		C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBHomePageHeader.xib; sourceTree = "<group>"; };
 		C7DE7F791BAAC344000ECBA0 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C7DE7F7A1BAAC344000ECBA0 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		C7DE7F7F1BAAC659000ECBA0 /* CBFunctionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFunctionTableViewController.h; sourceTree = "<group>"; };
+		C7DE7F801BAAC659000ECBA0 /* CBFunctionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFunctionTableViewController.m; sourceTree = "<group>"; };
+		C7DE7F831BAAE29F000ECBA0 /* CBMineHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMineHeaderView.h; sourceTree = "<group>"; };
+		C7DE7F841BAAE29F000ECBA0 /* CBMineHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMineHeaderView.m; sourceTree = "<group>"; };
 		C7DF8BF71BA97F9D00845A30 /* CBMyBaby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBMyBaby.storyboard; sourceTree = "<group>"; };
 		C7DF8BF91BA9800500845A30 /* CBShowBaby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBShowBaby.storyboard; sourceTree = "<group>"; };
 		C7DF8BFC1BA9882C00845A30 /* CBHomePageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHomePageTableViewController.h; sourceTree = "<group>"; };
@@ -177,9 +183,8 @@
 		C7513BFC1BA9525800A1B330 /* 潮宝主页 */ = {
 			isa = PBXGroup;
 			children = (
-				C7513C071BA95D3800A1B330 /* CBHomePage.storyboard */,
-				C7DF8BFC1BA9882C00845A30 /* CBHomePageTableViewController.h */,
-				C7DF8BFD1BA9882C00845A30 /* CBHomePageTableViewController.m */,
+				C7DE7F7E1BAAC624000ECBA0 /* 功能页 */,
+				C7DE7F7D1BAAC5CF000ECBA0 /* 主页 */,
 			);
 			name = "潮宝主页";
 			sourceTree = "<group>";
@@ -223,6 +228,45 @@
 			name = "分类";
 			sourceTree = "<group>";
 		};
+		C7DE7F7C1BAAC540000ECBA0 /* 轮播器 */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE7F821BAAE259000ECBA0 /* MineHeaderView */,
+				C7DE7F731BAAC17D000ECBA0 /* CBHomePageHeader.h */,
+				C7DE7F741BAAC17D000ECBA0 /* CBHomePageHeader.m */,
+				C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */,
+			);
+			name = "轮播器";
+			sourceTree = "<group>";
+		};
+		C7DE7F7D1BAAC5CF000ECBA0 /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				C7513C071BA95D3800A1B330 /* CBHomePage.storyboard */,
+				C7DF8BFC1BA9882C00845A30 /* CBHomePageTableViewController.h */,
+				C7DF8BFD1BA9882C00845A30 /* CBHomePageTableViewController.m */,
+			);
+			name = "主页";
+			sourceTree = "<group>";
+		};
+		C7DE7F7E1BAAC624000ECBA0 /* 功能页 */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE7F7F1BAAC659000ECBA0 /* CBFunctionTableViewController.h */,
+				C7DE7F801BAAC659000ECBA0 /* CBFunctionTableViewController.m */,
+			);
+			name = "功能页";
+			sourceTree = "<group>";
+		};
+		C7DE7F821BAAE259000ECBA0 /* MineHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				C7DE7F831BAAE29F000ECBA0 /* CBMineHeaderView.h */,
+				C7DE7F841BAAE29F000ECBA0 /* CBMineHeaderView.m */,
+			);
+			name = MineHeaderView;
+			sourceTree = "<group>";
+		};
 		C7DF8BFB1BA9875100845A30 /* 主界面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,9 +293,7 @@
 		C7E29E6D1BA948A600E75577 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C7DE7F731BAAC17D000ECBA0 /* CBHomePageHeader.h */,
-				C7DE7F741BAAC17D000ECBA0 /* CBHomePageHeader.m */,
-				C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */,
+				C7DE7F7C1BAAC540000ECBA0 /* 轮播器 */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -432,11 +474,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7DE7F811BAAC659000ECBA0 /* CBFunctionTableViewController.m in Sources */,
 				C7513C0C1BA964EC00A1B330 /* CBShowBabyTableViewController.m in Sources */,
 				C7513C061BA95BF900A1B330 /* CBHmePageViewController.m in Sources */,
 				C7DE7F7B1BAAC344000ECBA0 /* UIView+Extension.m in Sources */,
 				C7513BD81BA9448500A1B330 /* AppDelegate.m in Sources */,
 				C7E29E911BA96B0A00E75577 /* CBWelcomePageViewController.m in Sources */,
+				C7DE7F851BAAE29F000ECBA0 /* CBMineHeaderView.m in Sources */,
 				C7DF8BFE1BA9882C00845A30 /* CBHomePageTableViewController.m in Sources */,
 				C7DE7F751BAAC17D000ECBA0 /* CBHomePageHeader.m in Sources */,
 				C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */,

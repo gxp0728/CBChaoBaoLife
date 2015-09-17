@@ -51,27 +51,33 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CBHomecell" forIndexPath:indexPath];
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     CBHomePageHeader*headerview=[CBHomePageHeader CBHomePageHeader];
     [cell addSubview:headerview];
    headerview .frame=CGRectMake(0, 0, self.view.frame.size.width, 160.f);
     for (int i=0; i<Bnumber ;i++) {
         UIButton*button=[[UIButton alloc]init];
+        [button addTarget:self action:@selector(enter:) forControlEvents:UIControlEventTouchUpInside];
         CGFloat colum=i%2;
         CGFloat roum=i/2;
         if (colum==1) {
             
-            button.frame=CGRectMake(self.view.center.x+kLMargin, headerview.bottom+kUMargin+(bHeight+kUMargin)*roum+50.f, bWidth, bHeight);
+            button.frame=CGRectMake(((((self.view.frame.size.width/2)-bWidth)/2)+self.view.frame.size.width/2), headerview.bottom+kUMargin+(bHeight+kUMargin)*roum+50.f, bWidth, bHeight);
         }else{
-            button.frame=CGRectMake(self.view.center.x-kLMargin-bWidth, headerview.bottom+kUMargin+(bWidth+kUMargin)*roum, bWidth, bHeight);
+            button.frame=CGRectMake((((self.view.frame.size.width/2)-bWidth)/2), headerview.bottom+kUMargin+(bWidth+kUMargin)*roum, bWidth, bHeight);
+            
         }
         [cell addSubview:button];
-        [button setBackgroundColor:[UIColor redColor]];
+        
         [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"finditem_ad1-%d",i+1]] forState:UIControlStateNormal];
     }
     
     return cell;
 }
 
+-(void)enter:(UIButton*)sender{
+    [self performSegueWithIdentifier:@"tofupage" sender:sender];
+}
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 750.f;
 }

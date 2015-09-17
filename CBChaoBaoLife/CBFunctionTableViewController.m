@@ -1,26 +1,27 @@
 //
-//  CBMyBabyTableViewController.m
+//  CBFunctionTableViewController.m
 //  CBChaoBaoLife
 //
-//  Created by neuedu on 15/9/16.
+//  Created by neuedu on 15/9/17.
 //  Copyright (c) 2015年 gxp. All rights reserved.
 //
 
-#import "CBMyBabyTableViewController.h"
-#import "CBMineHeaderView.h"
-@interface CBMyBabyTableViewController ()
+#import "CBFunctionTableViewController.h"
+
+@interface CBFunctionTableViewController ()
 
 @end
 
-@implementation CBMyBabyTableViewController
+@implementation CBFunctionTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CBMineHeaderView*headerview=[CBMineHeaderView CBMineHeaderView];
-    headerview.frame=CGRectMake(0, 0, self.view.frame.size.width, 200.f);
-    self.tableView.tableHeaderView=headerview;
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,42 +32,27 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 30;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    if (section==0) {
-        return 1;
-    }else{
-    return 3;
-    }
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CBMyBabyCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
+    // Configure the cell...
     
     return cell;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    
-    return 10.f;
-    
-}
+*/
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section==0) {
-        
-        return 80.f;
-    }else{
-        return  44.f;
-    }
-    
-}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
