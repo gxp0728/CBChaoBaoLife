@@ -7,9 +7,10 @@
 //
 
 #import "CBShowBabyTableViewController.h"
-
+#import "CBShowBabyTableViewCell.h"
+#import "CBShowBabyFrameModel.h"
 @interface CBShowBabyTableViewController ()
-
+@property(strong,nonatomic)NSMutableArray*shows;
 @end
 
 @implementation CBShowBabyTableViewController
@@ -22,36 +23,54 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark 懒加载
+-(NSMutableArray *)shows{
+    if (_shows==nil) {
+        _shows=[NSMutableArray array];
+        NSArray*dict=[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"test.plist" ofType:nil]];
+        for (int i=0; i<dict.count; i++) {
+            CBShowBabyModel*show=[CBShowBabyModel CBShowBabyModelWithDict:dict[i]];
+            CBShowBabyFrameModel*showframe=[CBShowBabyFrameModel CBShowBabyFrameModelWithModel:show];
+            [_shows addObject:showframe];
+        }
+        
+    }
+    return _shows;
+}
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+//#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.shows.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
+    CBShowBabyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"showCell" forIndexPath:indexPath];
+   
     // Configure the cell...
-    
+    cell.frameModel=self.shows[indexPath.row];
     return cell;
 }
-*/
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CBShowBabyFrameModel*showframe=self.shows[indexPath.row];
+    return showframe.cellHeight;
+}
 
 /*
 // Override to support conditional editing of the table view.
