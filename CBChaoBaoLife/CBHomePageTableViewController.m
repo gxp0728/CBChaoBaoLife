@@ -79,7 +79,7 @@
     [self performSegueWithIdentifier:@"tofupage" sender:sender];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 750.f;
+    return 770.f;
 }
 
 @end

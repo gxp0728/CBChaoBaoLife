@@ -173,13 +173,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C7513BFB1BA9524A00A1B330 /* 晒宝 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "晒宝";
-			sourceTree = "<group>";
-		};
 		C7513BFC1BA9525800A1B330 /* 潮宝主页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,7 +278,6 @@
 				C7513C0D1BA964EF00A1B330 /* 我的页面 */,
 				C7513C091BA964C200A1B330 /* 晒宝页面 */,
 				C7513BFC1BA9525800A1B330 /* 潮宝主页 */,
-				C7513BFB1BA9524A00A1B330 /* 晒宝 */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
