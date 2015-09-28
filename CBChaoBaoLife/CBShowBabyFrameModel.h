@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "CBShowBabyModel.h"
+#import "NSString+MoreExtentions.h"
+#import "UIView+Extension.h"
 #import <UIKit/UIKit.h>
 #define kMargin 16.f
 #define kNameFont [UIFont systemFontOfSize:18.f]
@@ -17,6 +19,8 @@
 @property(assign,nonatomic)CGRect textFrame;
 @property(assign,nonatomic)CGRect nameFrame;
 @property(assign,nonatomic)CGRect picFrame;
+@property(assign,nonatomic)CGRect PariseFrame;
+@property(assign,nonatomic)CGRect commentFrame;
 @property(strong,nonatomic)CBShowBabyModel*showbaby;
 +(instancetype)CBShowBabyFrameModelWithModel:(CBShowBabyModel*)showbaby;
 
