@@ -31,17 +31,20 @@
     
     UINavigationController *secondViewController = [storyboard2 instantiateViewControllerWithIdentifier:@"shownav"];
     
-    UIStoryboard* storyboard3 = [UIStoryboard storyboardWithName:@"CBMyBaby" bundle:nil];
-    UINavigationController *thirdViewController = [storyboard3 instantiateViewControllerWithIdentifier:@"minenav"];
+    UIStoryboard* storyboard3 = [UIStoryboard storyboardWithName:@"CBNewsPage" bundle:nil];
+    UINavigationController *thirdViewController = [storyboard3 instantiateViewControllerWithIdentifier:@"newsnav"];
+    
+    UIStoryboard* storyboard4 = [UIStoryboard storyboardWithName:@"CBMyBaby" bundle:nil];
+    UINavigationController *fourViewController = [storyboard4 instantiateViewControllerWithIdentifier:@"minenav"];
     
     [self setViewControllers:@[firstViewController, secondViewController,
-                               thirdViewController]];
+                               thirdViewController,fourViewController]];
     ;
     
     UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
-    NSArray *tabBarItemImages = @[@"bottom_btn1", @"bottom_btn2", @"bottom_btn3"];
-    NSArray *tabBarItemTitles = @[@"首页", @"晒宝", @"我的"];
+    NSArray *tabBarItemImages = @[@"bottom_btn1", @"bottom_btn2", @"bottom_btn3",@"bottom_btn4"];
+    NSArray *tabBarItemTitles = @[@"首页", @"晒宝",@"消息", @"我的"];
     
     RDVTabBar *tabBar = [self tabBar];
     

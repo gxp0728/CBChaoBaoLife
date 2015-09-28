@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9345BCFC2C982EC102ED26AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F0F6A5A7C2650D5876FB74 /* libPods.a */; };
+		C7462AE61BB93C8F00C62FBC /* CBNewsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7462AE51BB93C8F00C62FBC /* CBNewsPage.storyboard */; };
+		C7462AE91BB93D1C00C62FBC /* CBNewsPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7462AE81BB93D1C00C62FBC /* CBNewsPageTableViewController.m */; };
 		C7513BD51BA9448500A1B330 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513BD41BA9448500A1B330 /* main.m */; };
 		C7513BD81BA9448500A1B330 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513BD71BA9448500A1B330 /* AppDelegate.m */; };
 		C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7513BD91BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld */; };
@@ -64,6 +66,9 @@
 		19F0F6A5A7C2650D5876FB74 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C12A7745372C2061A3B7856 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B9088C5DA7D6385BE1AAA3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C7462AE51BB93C8F00C62FBC /* CBNewsPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBNewsPage.storyboard; sourceTree = "<group>"; };
+		C7462AE71BB93D1C00C62FBC /* CBNewsPageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBNewsPageTableViewController.h; sourceTree = "<group>"; };
+		C7462AE81BB93D1C00C62FBC /* CBNewsPageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBNewsPageTableViewController.m; sourceTree = "<group>"; };
 		C7513BCF1BA9448500A1B330 /* CBChaoBaoLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CBChaoBaoLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7513BD31BA9448500A1B330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7513BD41BA9448500A1B330 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,6 +157,16 @@
 				19F0F6A5A7C2650D5876FB74 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7462AE41BB93C2300C62FBC /* 消息页面 */ = {
+			isa = PBXGroup;
+			children = (
+				C7462AE51BB93C8F00C62FBC /* CBNewsPage.storyboard */,
+				C7462AE71BB93D1C00C62FBC /* CBNewsPageTableViewController.h */,
+				C7462AE81BB93D1C00C62FBC /* CBNewsPageTableViewController.m */,
+			);
+			name = "消息页面";
 			sourceTree = "<group>";
 		};
 		C7513BC61BA9448500A1B330 = {
@@ -322,6 +337,7 @@
 		C7E29E6C1BA9489900E75577 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C7462AE41BB93C2300C62FBC /* 消息页面 */,
 				C7513C1B1BA997B200A1B330 /* 登录/注册界面 */,
 				C7DF8BFB1BA9875100845A30 /* 主界面 */,
 				C7E29E931BA96B0E00E75577 /* 欢迎页面 */,
@@ -514,6 +530,7 @@
 				C7FFF3971BAC16CC00D4F4F9 /* cbpic03.png in Resources */,
 				C7FFF3951BAC16CC00D4F4F9 /* cbpic01.png in Resources */,
 				C7FFF39B1BAC16CC00D4F4F9 /* cbpic07.png in Resources */,
+				C7462AE61BB93C8F00C62FBC /* CBNewsPage.storyboard in Resources */,
 				C7FFF3A11BAC16FC00D4F4F9 /* test.plist in Resources */,
 				C7513BE61BA9448500A1B330 /* LaunchScreen.xib in Resources */,
 				C7DF8BF81BA97F9D00845A30 /* CBMyBaby.storyboard in Resources */,
@@ -576,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7462AE91BB93D1C00C62FBC /* CBNewsPageTableViewController.m in Sources */,
 				C7FFF3811BAC139000D4F4F9 /* NSString+DateTransform.m in Sources */,
 				C7FFF3871BAC146200D4F4F9 /* CBShowBabyTableViewCell.m in Sources */,
 				C7DE7F811BAAC659000ECBA0 /* CBFunctionTableViewController.m in Sources */,
