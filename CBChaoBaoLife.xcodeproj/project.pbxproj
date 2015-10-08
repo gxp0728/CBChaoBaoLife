@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9345BCFC2C982EC102ED26AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F0F6A5A7C2650D5876FB74 /* libPods.a */; };
+		C743D8361BC693C00025A8A2 /* libParse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C743D8351BC693C00025A8A2 /* libParse.a */; };
 		C7462AE61BB93C8F00C62FBC /* CBNewsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7462AE51BB93C8F00C62FBC /* CBNewsPage.storyboard */; };
 		C7462AE91BB93D1C00C62FBC /* CBNewsPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7462AE81BB93D1C00C62FBC /* CBNewsPageTableViewController.m */; };
 		C7513BD51BA9448500A1B330 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513BD41BA9448500A1B330 /* main.m */; };
@@ -68,6 +69,7 @@
 		19F0F6A5A7C2650D5876FB74 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C12A7745372C2061A3B7856 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B9088C5DA7D6385BE1AAA3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C743D8351BC693C00025A8A2 /* libParse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libParse.a; path = "Pods/../build/Debug-iphoneos/libParse.a"; sourceTree = "<group>"; };
 		C7462AE51BB93C8F00C62FBC /* CBNewsPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBNewsPage.storyboard; sourceTree = "<group>"; };
 		C7462AE71BB93D1C00C62FBC /* CBNewsPageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBNewsPageTableViewController.h; sourceTree = "<group>"; };
 		C7462AE81BB93D1C00C62FBC /* CBNewsPageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBNewsPageTableViewController.m; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C743D8361BC693C00025A8A2 /* libParse.a in Frameworks */,
 				9345BCFC2C982EC102ED26AD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +163,7 @@
 		4BB45CB8C50B32DFC358F1CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C743D8351BC693C00025A8A2 /* libParse.a */,
 				19F0F6A5A7C2650D5876FB74 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -761,6 +765,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CBChaoBaoLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -772,6 +780,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CBChaoBaoLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
