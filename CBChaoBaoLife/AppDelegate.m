@@ -13,6 +13,7 @@
 #import "CBWelcomePageViewController.h"
 #import <RDVTabBarController.h>
 #import "CBSignInandLogInViewController.h"
+#import <Parse/Parse.h>
 @interface AppDelegate ()
 
 @end
@@ -22,6 +23,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    [Parse setApplicationId:@"nEb1zuoWQe96ZoGLxiFFcB0hqH5S6XHwWhulOlYv"
+                  clientKey:@"CTUukLzZVjreS89vCORStHVTyhIFm36Nz7AwTw9x"];
+    
+   
     
     NSDictionary*infoDict=[NSBundle mainBundle].infoDictionary;
     //从info中取到版本号
@@ -40,7 +45,8 @@
         if ([oldVersion isEqualToString:newVersion]) {
            
             UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"CBSignInandLogIn" bundle:nil];
-            CBSignInandLogInViewController*firstViewController=[storyboard instantiateViewControllerWithIdentifier:@"SigninandLogin"];
+            UINavigationController*firstViewController=[storyboard instantiateViewControllerWithIdentifier:@"CBSignin"];
+//            CBSignInandLogInViewController*firstViewController=[storyboard instantiateViewControllerWithIdentifier:@"SigninandLogin"];
             
             
             

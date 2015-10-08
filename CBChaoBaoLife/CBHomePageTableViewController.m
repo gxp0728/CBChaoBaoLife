@@ -9,7 +9,9 @@
 #import "CBHomePageTableViewController.h"
 #import "CBHomePageHeader.h"
 #import "UIView+Extension.h"
-
+#import "CBHmePageViewController.h"
+#import <RDVTabBarController.h>
+#import <RDVTabBarItem.h>
 #define kMargin 8.f
 #define kLMargin 20.f
 #define kUMargin 40.f
@@ -77,6 +79,17 @@
 
 -(void)enter:(UIButton*)sender{
     [self performSegueWithIdentifier:@"tofupage" sender:sender];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    CBHmePageViewController*first=[[CBHmePageViewController alloc]init];
+    for (UIView * view in [UIApplication sharedApplication].keyWindow.subviews) {
+        if ([view isKindOfClass:[RDVTabBar class]]) {
+            RDVTabBar * tabar=(RDVTabBar *)view;
+            tabar.hidden=YES;
+        }
+    }
+    
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 770.f;

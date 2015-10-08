@@ -22,6 +22,8 @@
 		C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */; };
 		C7513C1E1BA9987200A1B330 /* CBSignInandLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513C1D1BA9987200A1B330 /* CBSignInandLogInViewController.m */; };
 		C7513C201BA9989100A1B330 /* CBSignInandLogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7513C1F1BA9989100A1B330 /* CBSignInandLogIn.storyboard */; };
+		C7DC9D781BC5053000E2A71E /* CBSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DC9D771BC5053000E2A71E /* CBSignInViewController.m */; };
+		C7DC9D7D1BC51AB000E2A71E /* CBSetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DC9D7C1BC51AB000E2A71E /* CBSetTableViewController.m */; };
 		C7DE7F751BAAC17D000ECBA0 /* CBHomePageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE7F741BAAC17D000ECBA0 /* CBHomePageHeader.m */; };
 		C7DE7F771BAAC18A000ECBA0 /* CBHomePageHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */; };
 		C7DE7F7B1BAAC344000ECBA0 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C7DE7F7A1BAAC344000ECBA0 /* UIView+Extension.m */; };
@@ -90,6 +92,10 @@
 		C7513C1C1BA9987200A1B330 /* CBSignInandLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSignInandLogInViewController.h; sourceTree = "<group>"; };
 		C7513C1D1BA9987200A1B330 /* CBSignInandLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSignInandLogInViewController.m; sourceTree = "<group>"; };
 		C7513C1F1BA9989100A1B330 /* CBSignInandLogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBSignInandLogIn.storyboard; sourceTree = "<group>"; };
+		C7DC9D761BC5053000E2A71E /* CBSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSignInViewController.h; sourceTree = "<group>"; };
+		C7DC9D771BC5053000E2A71E /* CBSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSignInViewController.m; sourceTree = "<group>"; };
+		C7DC9D7B1BC51AB000E2A71E /* CBSetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSetTableViewController.h; sourceTree = "<group>"; };
+		C7DC9D7C1BC51AB000E2A71E /* CBSetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSetTableViewController.m; sourceTree = "<group>"; };
 		C7DE7F731BAAC17D000ECBA0 /* CBHomePageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHomePageHeader.h; sourceTree = "<group>"; };
 		C7DE7F741BAAC17D000ECBA0 /* CBHomePageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHomePageHeader.m; sourceTree = "<group>"; };
 		C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBHomePageHeader.xib; sourceTree = "<group>"; };
@@ -257,6 +263,8 @@
 				C7513C111BA9655600A1B330 /* CBMyBabyTableViewController.h */,
 				C7513C121BA9655600A1B330 /* CBMyBabyTableViewController.m */,
 				C7DF8BF71BA97F9D00845A30 /* CBMyBaby.storyboard */,
+				C7DC9D7B1BC51AB000E2A71E /* CBSetTableViewController.h */,
+				C7DC9D7C1BC51AB000E2A71E /* CBSetTableViewController.m */,
 			);
 			name = "我的页面";
 			sourceTree = "<group>";
@@ -267,8 +275,24 @@
 				C7513C1F1BA9989100A1B330 /* CBSignInandLogIn.storyboard */,
 				C7513C1C1BA9987200A1B330 /* CBSignInandLogInViewController.h */,
 				C7513C1D1BA9987200A1B330 /* CBSignInandLogInViewController.m */,
+				C7DC9D761BC5053000E2A71E /* CBSignInViewController.h */,
+				C7DC9D771BC5053000E2A71E /* CBSignInViewController.m */,
 			);
 			name = "登录/注册界面";
+			sourceTree = "<group>";
+		};
+		C7A3C48E1BC63304001D3940 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
+		C7DC9D7A1BC51A3D00E2A71E /* MineFootView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MineFootView;
 			sourceTree = "<group>";
 		};
 		C7DE7F781BAAC334000ECBA0 /* 分类 */ = {
@@ -289,7 +313,6 @@
 		C7DE7F7C1BAAC540000ECBA0 /* 轮播器 */ = {
 			isa = PBXGroup;
 			children = (
-				C7DE7F821BAAE259000ECBA0 /* MineHeaderView */,
 				C7DE7F731BAAC17D000ECBA0 /* CBHomePageHeader.h */,
 				C7DE7F741BAAC17D000ECBA0 /* CBHomePageHeader.m */,
 				C7DE7F761BAAC18A000ECBA0 /* CBHomePageHeader.xib */,
@@ -351,6 +374,8 @@
 		C7E29E6D1BA948A600E75577 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C7DC9D7A1BC51A3D00E2A71E /* MineFootView */,
+				C7DE7F821BAAE259000ECBA0 /* MineHeaderView */,
 				C7FFF3841BAC143400D4F4F9 /* 晒宝自定义cell */,
 				C7DE7F7C1BAAC540000ECBA0 /* 轮播器 */,
 			);
@@ -368,6 +393,7 @@
 		C7E29E701BA948C000E75577 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				C7A3C48E1BC63304001D3940 /* tools */,
 				C7DE7F781BAAC334000ECBA0 /* 分类 */,
 				C7513BD61BA9448500A1B330 /* AppDelegate.h */,
 				C7513BD71BA9448500A1B330 /* AppDelegate.m */,
@@ -594,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7462AE91BB93D1C00C62FBC /* CBNewsPageTableViewController.m in Sources */,
+				C7DC9D7D1BC51AB000E2A71E /* CBSetTableViewController.m in Sources */,
 				C7FFF3811BAC139000D4F4F9 /* NSString+DateTransform.m in Sources */,
 				C7FFF3871BAC146200D4F4F9 /* CBShowBabyTableViewCell.m in Sources */,
 				C7DE7F811BAAC659000ECBA0 /* CBFunctionTableViewController.m in Sources */,
@@ -611,6 +638,7 @@
 				C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */,
 				C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */,
 				C7513C1E1BA9987200A1B330 /* CBSignInandLogInViewController.m in Sources */,
+				C7DC9D781BC5053000E2A71E /* CBSignInViewController.m in Sources */,
 				C7FFF3821BAC139000D4F4F9 /* NSString+MoreExtentions.m in Sources */,
 				C7513BD51BA9448500A1B330 /* main.m in Sources */,
 			);

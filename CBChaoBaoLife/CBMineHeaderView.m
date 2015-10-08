@@ -24,7 +24,7 @@
         [self addSubview:headerview];
         UIButton*icon=[[UIButton alloc]init];
         _icon=icon;
-        [icon setBackgroundColor:[UIColor redColor]];
+        [icon setBackgroundColor:[UIColor blueColor]];
        
         UIButton*account=[[UIButton alloc]init];
         
