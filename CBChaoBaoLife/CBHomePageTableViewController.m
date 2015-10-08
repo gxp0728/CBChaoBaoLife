@@ -82,7 +82,8 @@
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    CBHmePageViewController*first=[[CBHmePageViewController alloc]init];
+    //CBHmePageViewController*first=[[CBHmePageViewController alloc]init];
+    
     for (UIView * view in [UIApplication sharedApplication].keyWindow.subviews) {
         if ([view isKindOfClass:[RDVTabBar class]]) {
             RDVTabBar * tabar=(RDVTabBar *)view;
