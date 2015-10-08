@@ -1688,6 +1688,18 @@
 		C743D82F1BC693AE0025A8A2 /* ParseUIConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseUIConstants.h; sourceTree = "<group>"; };
 		C743D8331BC693AE0025A8A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ParseUI.strings; sourceTree = "<group>"; };
 		C743D8341BC693AE0025A8A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C743D8381BC694930025A8A2 /* Bolts-dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Bolts-dummy.m"; sourceTree = "<group>"; };
+		C743D8391BC694930025A8A2 /* Bolts-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bolts-prefix.pch"; sourceTree = "<group>"; };
+		C743D83A1BC694930025A8A2 /* Bolts-Private.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Bolts-Private.xcconfig"; sourceTree = "<group>"; };
+		C743D83B1BC694930025A8A2 /* Bolts.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Bolts.xcconfig; sourceTree = "<group>"; };
+		C743D83D1BC6949E0025A8A2 /* Parse-dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Parse-dummy.m"; sourceTree = "<group>"; };
+		C743D83E1BC6949E0025A8A2 /* Parse-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Parse-prefix.pch"; sourceTree = "<group>"; };
+		C743D83F1BC6949E0025A8A2 /* Parse-Private.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Parse-Private.xcconfig"; sourceTree = "<group>"; };
+		C743D8401BC6949E0025A8A2 /* Parse.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Parse.xcconfig; sourceTree = "<group>"; };
+		C743D8421BC694AB0025A8A2 /* ParseUI-dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ParseUI-dummy.m"; sourceTree = "<group>"; };
+		C743D8431BC694AB0025A8A2 /* ParseUI-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseUI-prefix.pch"; sourceTree = "<group>"; };
+		C743D8441BC694AB0025A8A2 /* ParseUI-Private.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "ParseUI-Private.xcconfig"; sourceTree = "<group>"; };
+		C743D8451BC694AB0025A8A2 /* ParseUI.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ParseUI.xcconfig; sourceTree = "<group>"; };
 		C779E323F272597E87372CE0F5A0C3AD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		C828B87A75A11A836ABEB4580579C947 /* PFConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFConfig.m; path = Parse/PFConfig.m; sourceTree = "<group>"; };
 		C8607F7DF27ACF56B9906405232AA9A2 /* PFUserState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFUserState.m; path = Parse/Internal/User/State/PFUserState.m; sourceTree = "<group>"; };
@@ -2351,6 +2363,9 @@
 		876F80F8AFD1240ED0B7B9EA9C5BFAD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C743D8411BC694AB0025A8A2 /* ParseUI */,
+				C743D83C1BC6949E0025A8A2 /* Parse */,
+				C743D8371BC694930025A8A2 /* Bolts */,
 				C743D7E81BC693AE0025A8A2 /* ParseUI */,
 				C743D7BD1BC6939F0025A8A2 /* Bolts */,
 				C743D60E1BC6937B0025A8A2 /* Parse */,
@@ -4739,6 +4754,42 @@
 				C743D8321BC693AE0025A8A2 /* ParseUI.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		C743D8371BC694930025A8A2 /* Bolts */ = {
+			isa = PBXGroup;
+			children = (
+				C743D8381BC694930025A8A2 /* Bolts-dummy.m */,
+				C743D8391BC694930025A8A2 /* Bolts-prefix.pch */,
+				C743D83A1BC694930025A8A2 /* Bolts-Private.xcconfig */,
+				C743D83B1BC694930025A8A2 /* Bolts.xcconfig */,
+			);
+			name = Bolts;
+			path = "Target Support Files/Bolts";
+			sourceTree = "<group>";
+		};
+		C743D83C1BC6949E0025A8A2 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				C743D83D1BC6949E0025A8A2 /* Parse-dummy.m */,
+				C743D83E1BC6949E0025A8A2 /* Parse-prefix.pch */,
+				C743D83F1BC6949E0025A8A2 /* Parse-Private.xcconfig */,
+				C743D8401BC6949E0025A8A2 /* Parse.xcconfig */,
+			);
+			name = Parse;
+			path = "Target Support Files/Parse";
+			sourceTree = "<group>";
+		};
+		C743D8411BC694AB0025A8A2 /* ParseUI */ = {
+			isa = PBXGroup;
+			children = (
+				C743D8421BC694AB0025A8A2 /* ParseUI-dummy.m */,
+				C743D8431BC694AB0025A8A2 /* ParseUI-prefix.pch */,
+				C743D8441BC694AB0025A8A2 /* ParseUI-Private.xcconfig */,
+				C743D8451BC694AB0025A8A2 /* ParseUI.xcconfig */,
+			);
+			name = ParseUI;
+			path = "Target Support Files/ParseUI";
 			sourceTree = "<group>";
 		};
 		CC11E96FEBB75B30D9508FA7E9B915BA /* Pods */ = {
