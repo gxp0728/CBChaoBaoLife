@@ -28,6 +28,7 @@
         UIImageView* imageView = [[UIImageView alloc]init];
         NSString* imgName = [NSString stringWithFormat:@"ad_%02d", i];
         [imageView setImage:[UIImage imageNamed:imgName]];
+        
         [_scrollView addSubview:imageView];
         
         imageView.frame = CGRectMake(_scrollView.frame.size.width*i, 0, _scrollView.frame.size.width, _scrollView.frame.size.height);

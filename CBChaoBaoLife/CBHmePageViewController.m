@@ -49,6 +49,7 @@
     RDVTabBar *tabBar = [self tabBar];
     
     [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 50)];
+//    tabBar.frame=CGRectMake(0, [UIScreen mainScreen].bounds.size.height-50.f, [UIScreen mainScreen].bounds.size.width, 50.f);
     
     NSInteger index = 0;
     for (RDVTabBarItem *item in [[self tabBar] items]) {

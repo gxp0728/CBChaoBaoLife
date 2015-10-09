@@ -26,8 +26,6 @@
     [Parse setApplicationId:@"nEb1zuoWQe96ZoGLxiFFcB0hqH5S6XHwWhulOlYv"
                   clientKey:@"CTUukLzZVjreS89vCORStHVTyhIFm36Nz7AwTw9x"];
     
-   
-    
     NSDictionary*infoDict=[NSBundle mainBundle].infoDictionary;
     //从info中取到版本号
     NSString*newVersion=infoDict[@"CFBundleVersion"];

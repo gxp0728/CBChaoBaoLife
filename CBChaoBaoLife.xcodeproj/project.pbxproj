@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9345BCFC2C982EC102ED26AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F0F6A5A7C2650D5876FB74 /* libPods.a */; };
 		C743D8361BC693C00025A8A2 /* libParse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C743D8351BC693C00025A8A2 /* libParse.a */; };
+		C743D85D1BC6AC640025A8A2 /* TabBarHiddenTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C743D85C1BC6AC640025A8A2 /* TabBarHiddenTool.m */; };
 		C7462AE61BB93C8F00C62FBC /* CBNewsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7462AE51BB93C8F00C62FBC /* CBNewsPage.storyboard */; };
 		C7462AE91BB93D1C00C62FBC /* CBNewsPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7462AE81BB93D1C00C62FBC /* CBNewsPageTableViewController.m */; };
 		C7513BD51BA9448500A1B330 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7513BD41BA9448500A1B330 /* main.m */; };
@@ -70,6 +71,8 @@
 		2C12A7745372C2061A3B7856 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B9088C5DA7D6385BE1AAA3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C743D8351BC693C00025A8A2 /* libParse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libParse.a; path = "Pods/../build/Debug-iphoneos/libParse.a"; sourceTree = "<group>"; };
+		C743D85B1BC6AC640025A8A2 /* TabBarHiddenTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarHiddenTool.h; sourceTree = "<group>"; };
+		C743D85C1BC6AC640025A8A2 /* TabBarHiddenTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarHiddenTool.m; sourceTree = "<group>"; };
 		C7462AE51BB93C8F00C62FBC /* CBNewsPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CBNewsPage.storyboard; sourceTree = "<group>"; };
 		C7462AE71BB93D1C00C62FBC /* CBNewsPageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBNewsPageTableViewController.h; sourceTree = "<group>"; };
 		C7462AE81BB93D1C00C62FBC /* CBNewsPageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBNewsPageTableViewController.m; sourceTree = "<group>"; };
@@ -288,6 +291,8 @@
 		C7A3C48E1BC63304001D3940 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				C743D85B1BC6AC640025A8A2 /* TabBarHiddenTool.h */,
+				C743D85C1BC6AC640025A8A2 /* TabBarHiddenTool.m */,
 			);
 			name = tools;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				C7513BDB1BA9448500A1B330 /* CBChaoBaoLife.xcdatamodeld in Sources */,
 				C7513C131BA9655600A1B330 /* CBMyBabyTableViewController.m in Sources */,
 				C7513C1E1BA9987200A1B330 /* CBSignInandLogInViewController.m in Sources */,
+				C743D85D1BC6AC640025A8A2 /* TabBarHiddenTool.m in Sources */,
 				C7DC9D781BC5053000E2A71E /* CBSignInViewController.m in Sources */,
 				C7FFF3821BAC139000D4F4F9 /* NSString+MoreExtentions.m in Sources */,
 				C7513BD51BA9448500A1B330 /* main.m in Sources */,
