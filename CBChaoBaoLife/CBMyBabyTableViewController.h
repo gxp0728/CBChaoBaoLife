@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CBMyBabyTableViewController : UITableViewController
+#import "CBMineHeaderView.h"
+@interface CBMyBabyTableViewController : UITableViewController<UIScrollViewDelegate,UITableViewDataSource,UITableViewDelegate,CBMineHeaderViewDelegate>
 
 @end

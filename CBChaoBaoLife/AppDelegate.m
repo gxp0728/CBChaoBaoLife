@@ -14,6 +14,7 @@
 #import <RDVTabBarController.h>
 #import "CBSignInandLogInViewController.h"
 #import <Parse/Parse.h>
+#import "CBUserInfoMngTool.h"
 @interface AppDelegate ()
 
 @end
@@ -23,8 +24,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [Parse setApplicationId:@"nEb1zuoWQe96ZoGLxiFFcB0hqH5S6XHwWhulOlYv"
-                  clientKey:@"CTUukLzZVjreS89vCORStHVTyhIFm36Nz7AwTw9x"];
+//    [Parse setApplicationId:@"nEb1zuoWQe96ZoGLxiFFcB0hqH5S6XHwWhulOlYv"
+//                  clientKey:@"CTUukLzZVjreS89vCORStHVTyhIFm36Nz7AwTw9x"];
+    [Parse setApplicationId:@"VMUqm3SMPW1d3RFn7ZWncZMPkkghaE2UXPuwQlTJ"
+                  clientKey:@"k879ZCtyAsGH3YtfrzQ1t40dB9o7sUjAIiFMklSx"];
     
     NSDictionary*infoDict=[NSBundle mainBundle].infoDictionary;
     //从info中取到版本号
@@ -60,6 +63,8 @@
     
     //3。如果不同 把新版本app的版本号保存起来 利用偏好的方法 并且自己起一个名字
     [[NSUserDefaults standardUserDefaults]setObject:newVersion forKey:@"CFBundleVersion"];
+    NSLog(@"doc Path%@", [self applicationDocumentsDirectory]);
+    
     
 //    [window makeKeyAndVisible];
     return YES;
@@ -124,7 +129,10 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"CBChaoBaoLife.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    
+    NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],
+                                       NSMigratePersistentStoresAutomaticallyOption,[NSNumber numberWithBool:YES],NSInferMappingModelAutomaticallyOption, nil];
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:optionsDictionary error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";

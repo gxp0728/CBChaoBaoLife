@@ -1,20 +1,20 @@
 //
-//  TabBarHiddenTool.m
+//  CBTabBarHiddenTool.m
 //  CBChaoBaoLife
 //
 //  Created by neuedu on 15/10/8.
 //  Copyright (c) 2015年 gxp. All rights reserved.
 //
 
-#import "TabBarHiddenTool.h"
+#import "CBTabBarHiddenTool.h"
 
-static TabBarHiddenTool* tool;
-@implementation TabBarHiddenTool
+static CBTabBarHiddenTool* tool;
+@implementation CBTabBarHiddenTool
 
-+(instancetype)shareTabBarHiddenTool{
++(instancetype)shareCBTabBarHiddenTool{
     static dispatch_once_t once;
     dispatch_once(&once, ^{
-        tool = [[TabBarHiddenTool alloc]init];
+        tool = [[CBTabBarHiddenTool alloc]init];
     });
     return tool;
 }

@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AFXMLDictionarySerializer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,6 +49,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>XMLDictionary.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -37,22 +67,52 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3C989D34981AF2320A6BD74B16089183</key>
+		<key>1DBAD9466019B8C9C7E4085F24C4B5E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41C543812576821DC06FF7084CCCF208</key>
+		<key>5352D432641F0656C90741034E32F31E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5724213DFF5265242CEECB94AD2A89D</key>
+		<key>54F54AC38A404251806853EF05C21523</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EEF2D20351A4236D4523277449502C64</key>
+		<key>62D20A716C56736D5AB4E71E9AAC8313</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>698E8D12B916A5ADE7375200989E4081</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B72C4A5BE6013A123DC471056C12B48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E8BBD33542247EF31B0405CD15FFF69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7708D4F5B67478EE9AF07B142A9D211A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3D631D49B195AB467AC0F13B9D186F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D829F78ADA236AF98532350430F78BA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

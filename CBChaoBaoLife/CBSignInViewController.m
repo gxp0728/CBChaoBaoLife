@@ -38,6 +38,7 @@
 }
 */
 
+#pragma mark 注册
 - (IBAction)signin:(UIButton *)sender {
 
     if (_password.text.length==0  || _account.text.length==0) {

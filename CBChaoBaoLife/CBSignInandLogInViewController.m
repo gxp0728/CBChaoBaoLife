@@ -11,6 +11,8 @@
 #import "CBHomePageTableViewController.h"
 #import <Parse.h>
 #import "CBSignInViewController.h"
+#import "CBUserInfoMngTool.h"
+#import <QuartzCore/QuartzCore.h>
 @interface CBSignInandLogInViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *username;
@@ -20,6 +22,8 @@
 @end
 
 @implementation CBSignInandLogInViewController
+
+#pragma mark 登录
 - (IBAction)Login:(UIButton *)sender {
     
     PFUser *user = [PFUser user];
@@ -44,12 +48,20 @@
 //            [errorAlertView show];
 //        }
 //    }];
+    
+    
+    
+    
     [PFUser logInWithUsernameInBackground:_username.text   password:_password.text block:^(PFUser *user, NSError *error) {
         if (user) {
             //Open the wall
 
             CBHmePageViewController *mainnav=[[CBHmePageViewController alloc]init];
             [UIApplication sharedApplication].keyWindow.rootViewController=mainnav;
+            [self getImageFileWithName:@"image"];
+            NSString *name = [[NSUserDefaults standardUserDefaults]objectForKey:@"userName"];
+            [CBUserInfoMngTool sharedCbUserInfoMngTool].userName = name;
+            
         } else {
             //Something bad has ocurred
 
@@ -61,6 +73,29 @@
 
 }
 
+#pragma mark 从沙盒中取数据
+-(UIImage*) getImageFileWithName:(NSString*)fileName
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *path = [paths objectAtIndex:0];
+    NSString* filePath = [path stringByAppendingPathComponent:fileName];
+    NSError* err = [[NSError alloc] init];
+    NSData* data = [[NSData alloc] initWithContentsOfFile:filePath
+                                                  options:NSDataReadingMapped
+                                                    error:&err];
+    UIImage* img = nil;
+    if(data != nil)
+    {
+        img =[UIImage imageWithData:data];
+        [CBUserInfoMngTool sharedCbUserInfoMngTool].image = img;
+        
+    }
+    else
+    {
+        NSLog(@"getImageFileWithName error code : %ld",(long)[err code]);
+    }
+    return img;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -71,15 +106,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)signup:(UIButton *)sender {
     

@@ -22,7 +22,7 @@
     
     
     _scrollView.delegate = self;
-    
+    _scrollView.bounces = NO;
     
     for (int i=0; i<5; i++) {
         UIImageView* imageView = [[UIImageView alloc]init];

@@ -1,5 +1,5 @@
 //
-//  TabBarHiddenTool.h
+//  CBTabBarHiddenTool.h
 //  CBChaoBaoLife
 //
 //  Created by neuedu on 15/10/8.
@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "CBHmePageViewController.h"
 
-@interface TabBarHiddenTool : NSObject
+@interface CBTabBarHiddenTool : NSObject
 
-+(instancetype)shareTabBarHiddenTool;
++(instancetype)shareCBTabBarHiddenTool;
 
 -(void)hiddenTabBar;
 

@@ -53,16 +53,16 @@
             </objects>
             <point key="canvasLocation" x="1016.5" y="59.5"/>
         </scene>
-        <!--Function Table View Controller-->
+        <!--Costume Matching Table View Controller-->
         <scene sceneID="Iao-fd-75a">
             <objects>
-                <tableViewController storyboardIdentifier="fupage" id="GUW-2Y-fIE" customClass="CBFunctionTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="l7A-0n-lrS">
+                <tableViewController storyboardIdentifier="fupage" id="GUW-2Y-fIE" customClass="CBCostumeMatchingTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="l7A-0n-lrS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1vA-N6-J3u">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="1vA-N6-J3u" customClass="CBCostumeMatchingTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1vA-N6-J3u" id="FKJ-7c-BgT">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -75,10 +75,63 @@
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="m3S-WT-0kA" kind="show" identifier="todetail" id="Lah-Cd-VI0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNb-8h-reh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="17"/>
+            <point key="canvasLocation" x="1501.5" y="16.5"/>
+        </scene>
+        <!--商品详情-->
+        <scene sceneID="94r-wh-Rb7">
+            <objects>
+                <viewController title="商品详情" id="m3S-WT-0kA" customClass="CBProDetailsoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Mu-R6-oVu"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhO-1a-25p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="70a-jf-xcf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="YLG-Wo-RoZ" kind="show" identifier="totaobao" id="fj9-DG-3hp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezz-ac-9Gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033.5" y="23.5"/>
+        </scene>
+        <!--淘宝网页-->
+        <scene sceneID="r0l-NE-FuP">
+            <objects>
+                <viewController title="淘宝网页" id="YLG-Wo-RoZ" customClass="CBTaoBaoPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fXe-RE-Lsu"/>
+                        <viewControllerLayoutGuide type="bottom" id="xkl-C0-0xM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qaJ-7J-udL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="alq-eh-DHC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="alq-eh-DHC" id="tWu-nn-vcj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TED-2e-C9Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486.5" y="23.5"/>
         </scene>
     </scenes>
 </document>

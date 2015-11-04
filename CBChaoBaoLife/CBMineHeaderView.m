@@ -8,41 +8,60 @@
 
 #import "CBMineHeaderView.h"
 
+#import "CBUserInfoMngTool.h"
+
 @implementation CBMineHeaderView
 
 
 +(instancetype)CBMineHeaderView{
     CBMineHeaderView*view=[[CBMineHeaderView alloc]init];
+    
     return view;
 }
+
+#pragma mark 自定义控件
 -(instancetype)init{
     self=[super init];
     if (self) {
-        UIImageView*headerview=[[UIImageView alloc]init];
-        _headerview=headerview;
-        [headerview setImage:[UIImage imageNamed:@"Default-1"]];
-        [self addSubview:headerview];
-        UIButton*icon=[[UIButton alloc]init];
-        _icon=icon;
-        [icon setBackgroundColor:[UIColor blueColor]];
+        
+        _imageBG = [[UIImageView alloc]init];
+        _imageBG.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200);
+        _imageBG.image = [UIImage imageNamed:@"BG.jpg"];
+        [self addSubview:_imageBG];
+        _headImageView=[[UIButton alloc]init];
+      
+        [_headImageView addTarget:self action:@selector(setIcon:) forControlEvents:UIControlEventTouchUpInside];
+        _headImageView.frame=CGRectMake(([UIScreen mainScreen].bounds.size.width-80)/2, 40, 80, 80);
+        _headImageView.layer.cornerRadius = 80/2;
+        _headImageView.clipsToBounds = YES;
+        
+        
+        [self addSubview:_headImageView];
+        
        
-        UIButton*account=[[UIButton alloc]init];
         
-        [account setTitle:@"你好" forState:UIControlStateNormal];
+        _nameLabel=[[UILabel alloc]init];
         
-        [account setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _nameLabel.text = [CBUserInfoMngTool sharedCbUserInfoMngTool].userName;
+        _nameLabel.textAlignment=NSTextAlignmentCenter;
+        _nameLabel.frame=CGRectMake([UIScreen mainScreen].bounds.size.width/2-100.f, CGRectGetMaxY(_headImageView.frame)+5, 200, 20);
+        _nameLabel.textAlignment =NSTextAlignmentCenter;
         
-        [self addSubview:icon];
-        _account=account;
-        [self addSubview:account];
+        
+         [self addSubview:_nameLabel];
+        
+    
+        
+
     }
     return self;
 }
 
--(void)layoutSubviews{
-    [super layoutSubviews];
-    _account.frame=CGRectMake(90.f ,130.f ,100.f,20.f);
-    _icon.frame=CGRectMake(20.f, 120.f, 60.f, 60.f);
-    _headerview.frame=CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+
+-(void)setIcon:(UIButton*)icon{
+    NSLog(@"换头像");
+    if ([_delegate respondsToSelector:@selector(CBMineHeaderViewDidbuttonClick:) ]) {
+        [_delegate CBMineHeaderViewDidbuttonClick:self];
+    }
 }
 @end
