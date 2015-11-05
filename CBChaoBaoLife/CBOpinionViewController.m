@@ -10,6 +10,8 @@
 #import "UIView+Extension.h"
 @interface CBOpinionViewController ()
 
+@property (weak,nonatomic)UILabel *placeHolder;
+
 @end
 
 @implementation CBOpinionViewController
@@ -22,13 +24,23 @@
 }
 #pragma mark 添加子控件
 -(void)setSubviews{
-    UITextField *text = [[UITextField alloc]init];
+    UITextView *text = [[UITextView alloc]init];
     [self.view addSubview:text];
+    text.delegate = self;
     text.textAlignment = 0;
     text.frame = CGRectMake(20,30.f+64.f , [UIScreen mainScreen].bounds.size.width-40.f, 150.f);
     text.backgroundColor = [UIColor colorWithRed:242.f/255.f green:242.f/255.f blue:242.f/255.f alpha:1.f];
     text.layer.cornerRadius = 10.f;
-    text.placeholder = @"您的意见就是我们最大的动力";
+    text.font = [UIFont systemFontOfSize:17.f];
+    UILabel *placeHolder = [[UILabel alloc]init];
+    [text addSubview:placeHolder];
+    _placeHolder = placeHolder;
+    placeHolder.frame = CGRectMake(2, 0, text.width, 40.f);
+    placeHolder.textColor = [UIColor colorWithRed:143.f/255.f green:143.f/255.f blue:143.f/255.f alpha:1];
+    placeHolder.text = @"您的意见就是我们最大的动力!";
+  
+    text.contentInset = UIEdgeInsetsMake(-64.f, 0, 0, 0);
+//    text.placeholder =;
     
     
     UILabel *info = [[UILabel alloc]init];
@@ -39,6 +51,8 @@
     info.textColor  = [UIColor grayColor];
     
     UITextView *number = [[UITextView alloc]init];
+    number.contentInset = UIEdgeInsetsMake(11.f, 0, 0, 0);
+    number.font = [UIFont systemFontOfSize:17.f];
     [self.view addSubview:number];
     number.textAlignment = 0;
     number.frame = CGRectMake(text.left,text.bottom+40.f,text.width,40.f);
@@ -53,6 +67,20 @@
     connectStyle.textColor = [UIColor grayColor];
     connectStyle.font = [UIFont systemFontOfSize:13.f];
     
+}
+
+#pragma mark textview代理函数
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView;{
+    _placeHolder.text =@"";
+    return YES;
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView{
+    if (textView.text == nil||textView.text.length == 0) {
+        _placeHolder.text = @"您的意见就是我们最大的动力";
+    }else{
+        return;
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

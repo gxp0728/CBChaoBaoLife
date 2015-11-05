@@ -23,38 +23,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [NSThread detachNewThreadSelector:@selector(loadMoreImage) toTarget:self withObject:nil];
+    
+    [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow LableText:@"正在加载中" animated:nil];
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadMoreImage)];
-    
-    // 马上进入刷新状态
     [self.tableView.header beginRefreshing];
-    
-    
-    if (_costumeArray == nil || _costumeArray.count == 0) {
-        [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow LableText:@"正在加载中" animated:nil];
-        [self.tableView reloadData];
-    }else {
-        return;
-    }
-   
-    
 }
 
+#pragma mark 加载图片
 -(void)loadMoreImage{
     
     PFQuery *query = [PFQuery queryWithClassName:@"CBCostumeMatching"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         if (!error) {
-            //Everything was correct, put the new objects and load the wall
-            self.imagearray = nil;
-            self.imagearray = [[NSMutableArray alloc] initWithArray:objects];
-            //            for (int i =0; i<_imageArray.count; i++) {
-            //                _imageModel =[CBCostumeMatchingModel costumeMatchingWithDict:_imageArray[i]];
-            //            }
-            [MBProgressHUD hideHUDForView:self.tableView animated:YES];
+            
+            _imagearray = nil;
+            _imagearray = [[NSMutableArray alloc] initWithArray:objects];
+        
+            _costumeArray = [NSMutableArray array];
+            for ( int i=0; i<_imagearray.count; i++) {
+                _costumeModel = [CBCostumeMatchingModel costumeMatchingWithDict:_imagearray[i]];
+                [_costumeArray addObject:_costumeModel];
+            }
+            [CBCoreDataCostumeTool shareCoreDataCostumeTool].costumeArray = _costumeArray;
+            [self.tableView reloadData];
+         [self.tableView.header  endRefreshing];
+            
         } else {
             
-            //4
             NSString *errorString = [[error userInfo] objectForKey:@"error"];
             UIAlertView *errorAlertView = [[UIAlertView alloc] initWithTitle:@"Error" message:errorString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
             [errorAlertView show];
@@ -66,18 +63,6 @@
     [MBProgressHUD hideHUDForView:[UIApplication sharedApplication].keyWindow animated:YES];
 }
 
-#pragma mark 懒加载数组
--(NSMutableArray *)imagearray{
-    if (_imagearray ==nil) {
-        _imagearray = [NSMutableArray array];
-        for ( int i=0; i<_costumeArray.count; i++) {
-            _costumeModel = [CBCostumeMatchingModel costumeMatchingWithDict:_costumeArray[i]];
-            [_imagearray addObject:_costumeModel];
-        }
-        
-    }
-    return _imagearray;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -95,27 +80,28 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return self.imagearray.count;
+    return self.costumeArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CBCostumeMatchingTableViewCell *cell = [CBCostumeMatchingTableViewCell CostumeMatchingTableViewCellWithTableView:tableView];
 
-    cell.costume = self.imagearray[indexPath.row];
+    cell.costume = self.costumeArray[indexPath.row];
     cell.backgroundColor = [UIColor colorWithRed:236.f/255.f green:236.f/255.f blue:241.f/255.f alpha:1];
    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     
     return cell;
 }
 
 #pragma mark 跳转详情页面
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    CBCostumeMatchingModel *model = self.imagearray[indexPath.row];
+    CBCostumeMatchingModel *model = self.costumeArray[indexPath.row];
     [self performSegueWithIdentifier:@"todetail" sender:model];
     
 }
 
-#pragma mark 切换时调用的函数
+#pragma mark 切换界面时调用的函数
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     CBProDetailsoViewController *vc = [[CBProDetailsoViewController alloc]init];

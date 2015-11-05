@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CBOpinionViewController : UIViewController
+@interface CBOpinionViewController : UIViewController<UITextViewDelegate>
 
 @end

@@ -450,13 +450,6 @@
 			path = "可直接用的分类";
 			sourceTree = "<group>";
 		};
-		C7DC9D7A1BC51A3D00E2A71E /* MineFootView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = MineFootView;
-			sourceTree = "<group>";
-		};
 		C7DE7F7C1BAAC540000ECBA0 /* 轮播器 */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,21 +488,21 @@
 			name = MineHeaderView;
 			sourceTree = "<group>";
 		};
-		C7DF8BFB1BA9875100845A30 /* 主界面 */ = {
+		C7DF8BFB1BA9875100845A30 /* 主界面控制 */ = {
 			isa = PBXGroup;
 			children = (
 				C7513C041BA95BF900A1B330 /* CBHmePageViewController.h */,
 				C7513C051BA95BF900A1B330 /* CBHmePageViewController.m */,
 			);
-			name = "主界面";
+			name = "主界面控制";
 			sourceTree = "<group>";
 		};
 		C7E29E6C1BA9489900E75577 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C7DF8BFB1BA9875100845A30 /* 主界面控制 */,
 				C7462AE41BB93C2300C62FBC /* 消息页面 */,
 				C7513C1B1BA997B200A1B330 /* 登录/注册界面 */,
-				C7DF8BFB1BA9875100845A30 /* 主界面 */,
 				C7E29E931BA96B0E00E75577 /* 欢迎页面 */,
 				C7513C0D1BA964EF00A1B330 /* 我的页面 */,
 				C7513C091BA964C200A1B330 /* 晒宝页面 */,
@@ -522,7 +515,6 @@
 			isa = PBXGroup;
 			children = (
 				C7BD01B71BC7F99E00DB6C8D /* 自定义搭配cell */,
-				C7DC9D7A1BC51A3D00E2A71E /* MineFootView */,
 				C7DE7F821BAAE259000ECBA0 /* MineHeaderView */,
 				C7FFF3841BAC143400D4F4F9 /* 晒宝自定义cell */,
 				C7DE7F7C1BAAC540000ECBA0 /* 轮播器 */,
